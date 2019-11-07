@@ -1,0 +1,28 @@
+kind: LimitRange
+apiVersion: v1
+metadata:
+  name: tekton-pipelines-core-resource-limits
+  namespace: tekton-pipelines
+  selfLink: >-
+    /api/v1/namespaces/tekton-pipelines/limitranges/tekton-pipelines-core-resource-limits
+  uid: 492a15c6-9d90-11e9-ae59-0a8e513d9bd0
+  resourceVersion: '1063283'
+  creationTimestamp: '2019-07-03T12:44:23Z'
+spec:
+  limits:
+    - type: Container
+      max:
+        memory: 6Gi
+      min:
+        memory: '0'
+      default:
+        cpu: 500m
+        memory: 1536Mi
+      defaultRequest:
+        cpu: 50m
+        memory: 256Mi
+    - type: Pod
+      max:
+        memory: 12Gi
+      min:
+        memory: '0'
