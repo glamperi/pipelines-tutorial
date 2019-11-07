@@ -81,7 +81,7 @@ spec:
       from:
         kind: ImageStreamTag
         name: spring-petclinic:latest
-        namespace: pipelines-tutorial
+        namespace: tekton-pipelines
     type: ImageChange
 ---
 apiVersion: v1
