@@ -63,7 +63,14 @@ OpenShift Pipelines is provided as an add-on on top of OpenShift that can be ins
 Create a project for the sample application that you will be using in this tutorial:
 
 ```bash
-$ oc new-project pipelines-tutorial
+$ oc new-project tekton-pipelines
+```
+
+
+Add new limitranges for this project, the defaults are too low:
+
+```bash
+$ oc create -f https://raw.githubusercontent.com/glamperi/pipelines-tutorial/master/pipeline/limitranges.yml
 ```
 
 OpenShift pipelines automatically adds and configures a `serviceaccount` -
