@@ -7,7 +7,7 @@ spec:
   type: image
   params:
   - name: url
-    value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/spring-petclinic
+    value: image-registry.openshift-image-registry.svc:5000/tekton-pipelines/spring-petclinic
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
